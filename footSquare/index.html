@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <title>Foot Square</title>
+</head>
+<body>
+    <nav class="w-full bg-white h-16 fixed drop-shadow-md flex items-center justify-center z-100">
+        <h1 class="font-rejouice text-3xl font-bold text-blue-800">Foot Square</h1>
+    </nav>
+    <div id="main" class="scroll-smooth">
+        <div class="w-full h-screen bg-white flex items-center justify-center gap-8 flex-col">
+            <div class="w-full h-36 flex items-center justify-center overflow-hidden">
+                <h1 class="font-rejouice text-9xl font-bold text-blue-600 text-center max-lg:text-8xl max-[425px]:text-6xl" id="title">World Of Football</h1>
+            </div>
+            <div class="w-full h-36 flex items-center justify-center gap-11 flex-wrap overflow-hidden">
+                <h2 class="text-3xl font-nb font-semibold px-5 py-3 rounded-2xl bg-white hover:drop-shadow-lg ease-out cursor-pointer shadow-gray-500 max-md:text-2xl max-[555px]:text-lg features">Standings</h2>
+                <h2 class="text-3xl font-nb font-semibold px-5 py-3 rounded-2xl bg-white hover:drop-shadow-lg ease-out cursor-pointer shadow-gray-500 max-md:text-2xl max-[555px]:text-lg features">Match Scores</h2>
+                <h2 class="text-3xl font-nb font-semibold px-5 py-3 rounded-2xl bg-white hover:drop-shadow-lg ease-out cursor-pointer shadow-gray-500 max-md:text-2xl max-[555px]:text-lg features">Fixtures</h2>
+            </div>
+        </div>
+        <div class="w-full px-6 py-6 flex flex-col justify-center items-center">
+            <h2 class="font-nb font-semibold text-black text-4xl text-center underline">Explore Top Leagues</h2>
+            <input type="text" name="country" id="country" class="w-60 h-12 px-4 py-2 mt-5 font-nb font-semibold outline-none rounded-md border-2 text-blue-600 text-xl placeholder:italic placeholder:text-gray-600 placeholder:font-nb border-gray-400 focus:border-blue-600" placeholder="Search Country ...">
+            <button class="px-5 py-4 bg-blue-600 text-xl mt-5 rounded-lg text-white font-semibold cursor-pointer hover:bg-blue-900 duration-200 ease-in-out" id="search-league-btn">Search League</button>
+            <div class="w-full h-40 px-2 py-2 flex items-center justify-center gap-5 flex-wrap mt-4 overflow-hidden overflow-y-scroll" id="leagues">
+                <div class="w-32 h-32 bg-white rounded-full ease-in-out flex items-center justify-center cursor-pointer shadow-lg shadow-gray-400 hover:border border-blue-400 max-lg:w-28 max-lg:h-28"><img id="39"  src="images/premier_league.png" alt="pl" class="w-28 object-center object-cover h-28 league-boxs max-lg:w-24 max-lg:h-24"></div>
+                <div class="w-32 h-32 bg-white rounded-full ease-in-out flex items-center justify-center cursor-pointer shadow-lg shadow-gray-400 hover:border border-blue-400 max-lg:w-28 max-lg:h-28"><img id="140" src="images/la_liga.png" alt="la liga" class="w-24 object-center object-cover h-24 league-boxs max-lg:w-20 max-lg:h-20"></div>
+                <div class="w-32 h-32 bg-white rounded-full ease-in-out flex items-center justify-center cursor-pointer shadow-lg shadow-gray-400 hover:border border-blue-400 max-lg:w-28 max-lg:h-28"><img id="135" src="images/serie_a.png" alt="serie a" class="w-24 object-center object-cover h-24 league-boxs max-lg:w-24 max-lg:h-24"></div>
+                <div class="w-32 h-32 bg-white rounded-full ease-in-out flex items-center justify-center cursor-pointer shadow-lg shadow-gray-400 hover:border border-blue-400 max-lg:w-28 max-lg:h-28"><img id="78" src="images/bundesliga.png" alt="bundesliga" class="w-28 object-center object-cover league-boxs h-28 max-lg:w-24 max-lg:h-24"></div>
+                <div class="w-32 h-32 bg-white rounded-full ease-in-out flex items-center justify-center cursor-pointer shadow-lg shadow-gray-400 hover:border border-blue-400 max-lg:w-28 max-lg:h-28"><img id="61" src="images/league_one.png" alt="league one" class="w-32 object-center object-cover league-boxs h-32 max-lg:w-28 max-lg:h-28"></div>
+            </div>
+        </div>
+        <div class="w-full p-6 flex flex-col items-center justify-center gap-3">
+            <h1 class="font-nb font-bold text-black text-4xl text-center underline">League Details</h1>
+            <div class="w-3/4 bg-slate-300 p-3 rounded-lg m-10 flex flex-col shadow-md shadow-slate-700 drop-shadow-md max-md:w-3/4 max-[555px]:w-5/6 max-[375px]:w-80">
+                <h2 class="font-rejouice text-black text-2xl font-medium mx-5 my-5 max-[555px]:text-xl" id="league-name">League Name</h2>
+                <div class="w-full p-2 flex items-center justify-center gap-4 max-[375px]:gap-2 max-[375px]:flex-wrap">
+                    <button class="font-nb font-semibold text-2xl px-3 py-3 bg-white rounded-md shadow-md shadow-gray-600 hover:text-blue-500 duration-200 ease-in-out max-md:text-lg max-[425px]:text-sm" id="matchBtn">Matches</button>
+                    <button class="font-nb font-semibold text-2xl px-3 py-3 bg-white rounded-md shadow-md shadow-gray-600 hover:text-blue-500 duration-200 ease-in-out max-md:text-lg max-[425px]:text-sm" id="standingsBtn">Standings</button>
+                    <button class="font-nb font-semibold text-2xl px-3 py-3 bg-white rounded-md shadow-md shadow-gray-600 hover:text-blue-500 duration-200 ease-in-out max-md:text-lg max-[425px]:text-sm" id="statsBtn">Stats</button>
+                </div>
+                <div class="w-full p-2 flex flex-col gap-2 bg-white mt-4 rounded-md" id="first-section">
+                    <div class="w-full flex items-center justify-center p-2 border-b-2 border-gray-300 gap-6 flex-wrap">
+                        <input type="date" name="date" id="date" class="outline-none bg-blue-400 w-44 h-12 rounded-md px-4 text-white cursor-pointer font-nb">
+                        <select name="season" id="season" class="outline-none bg-blue-400 w-44 h-12 rounded-md px-4 text-white font-nb">
+                            <option value="">Select Season</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                        </select>
+                        <button class="outline-none p-3 bg-blue-700 rounded-md text-white font-medium font-nb" id="dateBtn">Search Matches</button>
+                    </div>
+                    <div class="w-full p-2 flex flex-col gap-2 bg-white mt-4 rounded-md" id="match-section"></div>
+                </div>
+                <div class="w-full p-2 flex flex-col gap-2 bg-white mt-4 rounded-md" id="third-section">
+                    <h3 class="font-nb font-semibold text-lg mt-3 ml-3">Goals</h3>
+                    <div class="w-full h-7 flex items-center justify-between p-2 border-b-2 border-gray-300">
+                        <p class="font-nb font-medium text-lg ml-2">Player</p>
+                        <p class="font-nb font-medium text-lg mr-2">Goals</p>
+                    </div>
+                    <div class="w-full p-2 flex flex-col gap-2 bg-white mt-4 rounded-md" id="stats-section"></div>
+                </div>
+                <div class="w-full p-2 flex flex-col gap-2 bg-white mt-4 rounded-md" id="second-section">
+                    <div class="w-full h-7 flex items-center justify-between p-2 border-b-2 border-gray-300">
+                        <div class="w-1/2 p-0.5">
+                            <h4 class="font-nb font-semibold text-lg max-[555px]:text-sm">Club</h1>
+                        </div>
+                        <div class="w-1/2 p-0.5 flex gap-1.5 items-center justify-end">
+                            <p class="font-nb text-lg font-semibold max-[555px]:text-sm">MP</p>
+                            <p class="font-nb text-lg font-semibold max-[555px]:text-sm">W</p>
+                            <p class="font-nb text-lg font-semibold max-[555px]:text-sm">D</p>
+                            <p class="font-nb text-lg font-semibold max-[555px]:text-sm">L</p>
+                            <p class="font-nb text-lg font-semibold max-sm:hidden">GF</p>
+                            <p class="font-nb text-lg font-semibold max-sm:hidden">GA</p>
+                            <p class="font-nb text-lg font-semibold max-sm:hidden">GD</p>
+                            <p class="font-nb text-lg font-semibold max-[555px]:text-sm">PTS</p>
+                        </div>
+                    </div>
+                    <div class="w-full p-2 flex flex-col gap-2 bg-white mt-4 rounded-md" id="standings-section"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+        integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+        integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+    <script src="animations.js"></script>
+</body>
+</html>
